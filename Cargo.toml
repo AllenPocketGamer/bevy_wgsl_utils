@@ -1,0 +1,12 @@
+[package]
+name = "bevy_wgsl_utils"
+version = "0.15.1"
+edition = "2024"
+authors = ["AllenPocketGamer@Gmail.com"]
+description = "A Bevy plugin that provides useful shader function for WGSL."
+homepage = "https://github.com/AllenPocketGamer/slime-ecobox"
+keywords = ["bevy", "plugin", "wgsl"]
+categories = ["game-engines", "graphics", "rendering"]
+
+[dependencies]
+bevy = { workspace = true }
