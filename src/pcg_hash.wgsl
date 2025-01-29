@@ -34,7 +34,7 @@ fn pcg_hash_22_u(v: vec2u) -> vec2u {
 }
 
 // u32: 1 out, 3 in
-fn pcg_hash_13_u(v: vec3u) -> f32 {
+fn pcg_hash_13_u(v: vec3u) -> u32 {
     let v1 = pcg_hash_33_u(v);
 
     return v1.x ^ v1.y ^ v1.z;

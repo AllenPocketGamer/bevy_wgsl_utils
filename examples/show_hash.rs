@@ -46,10 +46,10 @@ pub struct FullscreenMaterial {}
 
 impl Material for FullscreenMaterial {
     fn vertex_shader() -> ShaderRef {
-        "show_noise.wgsl".into()
+        "show_hash.wgsl".into()
     }
 
     fn fragment_shader() -> ShaderRef {
-        "show_noise.wgsl".into()
+        "show_hash.wgsl".into()
     }
 }
