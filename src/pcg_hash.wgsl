@@ -106,6 +106,8 @@ fn pcg_hash_44_u(v: vec4u) -> vec4u
 }
 
 // f32: 1 out, 1 in
+//
+// out range: [0.0, 1.0]
 fn pcg_hash_11_f(v: f32) -> f32 {
     let v1 = bitcast<u32>(v);
 
@@ -113,6 +115,8 @@ fn pcg_hash_11_f(v: f32) -> f32 {
 }
 
 // f32: 1 out, 2 in
+//
+// out range: [0.0, 1.0]
 fn pcg_hash_12_f(v: vec2f) -> f32 {
     let v1 = bitcast<vec2u>(v);
 
@@ -120,6 +124,8 @@ fn pcg_hash_12_f(v: vec2f) -> f32 {
 }
 
 // f32: 2 out, 1 in
+//
+// out range: [0.0, 1.0]
 fn pcg_hash_22_f(v: vec2f) -> vec2f {
     let v1 = bitcast<vec2u>(v);
 
@@ -127,6 +133,8 @@ fn pcg_hash_22_f(v: vec2f) -> vec2f {
 }
 
 // f32: 1 out, 3 in
+//
+// out range: [0.0, 1.0]
 fn pcg_hash_13_f(v: vec3f) -> f32 {
     let v1 = bitcast<vec3u>(v);
 
@@ -134,6 +142,8 @@ fn pcg_hash_13_f(v: vec3f) -> f32 {
 }
 
 // f32: 2 out, 3 in
+//
+// out range: [0.0, 1.0]
 fn pcg_hash_23_f(v: vec3f) -> vec2f {
     let v1 = bitcast<vec3u>(v);
 
@@ -141,6 +151,8 @@ fn pcg_hash_23_f(v: vec3f) -> vec2f {
 }
 
 // f32: 3 out, 3 in
+//
+// out range: [0.0, 1.0]
 fn pcg_hash_33_f(v: vec3f) -> vec3f {
     let v1 = bitcast<vec3u>(v);
 
@@ -148,6 +160,8 @@ fn pcg_hash_33_f(v: vec3f) -> vec3f {
 }
 
 // f32: 1 out, 4 in
+//
+// out range: [0.0, 1.0]
 fn pcg_hash_14_f(v: vec4f) -> f32 {
     let v1 = bitcast<vec4u>(v);
 
@@ -155,6 +169,8 @@ fn pcg_hash_14_f(v: vec4f) -> f32 {
 }
 
 // f32: 2 out, 4 in
+//
+// out range: [0.0, 1.0]
 fn pcg_hash_24_f(v: vec4f) -> vec2f {
     let v1 = bitcast<vec4u>(v);
 
@@ -162,6 +178,8 @@ fn pcg_hash_24_f(v: vec4f) -> vec2f {
 }
 
 // f32: 3 out, 4 in
+//
+// out range: [0.0, 1.0]
 fn pcg_hash_34_f(v: vec4f) -> vec3f {
     let v1 = bitcast<vec4u>(v);
 
@@ -169,6 +187,8 @@ fn pcg_hash_34_f(v: vec4f) -> vec3f {
 }
 
 // f32: 4 out, 4 in
+//
+// out range: [0.0, 1.0]
 fn pcg_hash_44_f(v: vec4f) -> vec4f {
     let v1 = bitcast<vec4u>(v);
 

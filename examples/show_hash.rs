@@ -11,7 +11,7 @@ use bevy_wgsl_utils::WgslUtilsPlugin;
 fn main() {
     App::new()
         .add_plugins(DefaultPlugins)
-        .add_plugins(MaterialPlugin::<FullscreenMaterial>::default())
+        .add_plugins(MaterialPlugin::<ShowPcgHashMaterial>::default())
         .add_plugins(WgslUtilsPlugin)
         .add_systems(Startup, setup)
         .run();
@@ -20,10 +20,10 @@ fn main() {
 pub fn setup(
     mut commands: Commands,
     mut meshes: ResMut<Assets<Mesh>>,
-    mut fmats: ResMut<Assets<FullscreenMaterial>>,
+    mut fmats: ResMut<Assets<ShowPcgHashMaterial>>,
 ) {
     let mesh_handle = meshes.add(Rectangle::new(2.0, 2.0));
-    let fmat_handle = fmats.add(FullscreenMaterial {});
+    let fmat_handle = fmats.add(ShowPcgHashMaterial {});
 
     commands.spawn((
         Mesh3d(mesh_handle),
@@ -42,9 +42,9 @@ pub fn setup(
 }
 
 #[derive(Asset, TypePath, AsBindGroup, Debug, Clone)]
-pub struct FullscreenMaterial {}
+pub struct ShowPcgHashMaterial {}
 
-impl Material for FullscreenMaterial {
+impl Material for ShowPcgHashMaterial {
     fn vertex_shader() -> ShaderRef {
         "show_hash.wgsl".into()
     }
