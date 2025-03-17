@@ -9,4 +9,4 @@ keywords = ["bevy", "plugin", "wgsl"]
 categories = ["game-engines", "graphics", "rendering"]
 
 [dependencies]
-bevy = { workspace = true }
+bevy = "0.15"
